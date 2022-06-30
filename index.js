@@ -87,12 +87,13 @@ function init() {
         }
     ]).then(function(data) {
       var file = data.directory + "/README.md";
+      // add each line of screenshots to img tag in markdown
       var screenshots = data.screenshots.split("\n");
       var imgTags = "";
       for (var i = 0; i < screenshots.length; i++) {
-        imgTags += `<img src="${screenshots[i]}" alt="screenshot" style="width:100%">`;
+        imgTags += `![screenshot](${screenshots[i]})`;
       }
-      //Generating markdown
+      data.screenshots = imgTags;
       console.log("Generating README.md...");
       writeToFile(file, generateMarkdown({...data}));  
 });
