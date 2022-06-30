@@ -2,9 +2,10 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 var generateMarkdown = require("./generateMarkdown");
+const { file } = require("tmp");
     
 function writeToFile(fileName, data) {
-  fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  fs.writeFileSync(fileName, data);
 }
 
 function init() {
@@ -19,6 +20,17 @@ function init() {
         name: "description",
         message: "Enter A Descrition For Your Project"
       },
+      {
+        type: "input",
+        name: "language",
+        message: "Enter programming language"
+
+    },
+    {
+      type: "input",
+      name: "languageURL",
+      message: "Enter language badge URL"
+    },
       {
         type: "input",
         name: "repo",
@@ -44,6 +56,7 @@ function init() {
           message: "Licensing Options",
           name: "license",
           choices: [
+              "None",
               "Apache2.0",
               "GNU Public v3.0",
               "MIT",
@@ -69,20 +82,19 @@ function init() {
         },
         {
           type: "input",
-          name: "language",
-          message: "Enter language badge URL"
-        }        
+          name: "directory",
+          message: "Enter directory path"
+        }
     ]).then(function(data) {
-      // make img tags for screenshots from data.screenshots 
+      var file = data.directory + "/README.md";
       var screenshots = data.screenshots.split("\n");
       var imgTags = "";
       for (var i = 0; i < screenshots.length; i++) {
         imgTags += `<img src="${screenshots[i]}" alt="screenshot" style="width:100%">`;
       }
-      // add img tags to data.screenshots
-      data.screenshots = imgTags;
-      console.log("Generated Markdown In Source Directory");
-      writeToFile("README.md", generateMarkdown({...data}));  
+      //Generating markdown
+      console.log("Generating README.md...");
+      writeToFile(file, generateMarkdown({...data}));  
 });
 }
 init()

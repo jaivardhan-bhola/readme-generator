@@ -1,20 +1,13 @@
-// function to generate markdown for README
-function generateMarkdown(data) {
-  // returns inquirer prompted data. Writing in markdown inside backticks and using data to personalize markdown page.
-  return `<h1 align="center">${data.title}</h1>
-  <div align = "center">
-  <a>
-  <img src ="${data.languageURL}" alt ="${data.language}"/>
-    </a>
-    </div>
-  <p align = "center">
+<h1 align="center">Readme Generator</h1>
+
+<p>
 <a href = 'https://code.visualstudio.com/'>
   <img alt ='Visual Studio Code' src='https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg'/>
   </a>
-  <a href="${data.repo}" target="_blank">
+  <a href="https://github.com/jaivardhan-bhola/readme-generator" target="_blank">
   <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
 </a>
-<a href="${data.licenseUrl}"><img src="https://img.shields.io/badge/License-${data.license[0]}-brightgreen.svg"></a>  
+<a href="https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"></a>  
 <a href="https://twitter.com/BholaJaivardhan" target="_blank">
 <img alt="Twitter: BholaJaivardhan" src="https://img.shields.io/twitter/follow/BholaJaivardhan.svg?style=social" />
 </a>
@@ -24,23 +17,28 @@ function generateMarkdown(data) {
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [About the author](#about-the-author)
 - [Contribution](#contribution)
 - [Support Us](#show-your-support)
 - [License](#license)
 
 # Description
-> ${data.description}
+> A CLI Program To Generate Readme.md Files For Projects
 
 # Installation
-${data.installation}
+<li>Clone the repository
+<li>Navigate to the directory 
+
+```
+$ npm install npm-install-all -g
+$ npm-install-all
+```
+	
 
 # Usage
-${data.usage}
-
-# Screenshots
-${data.screenshots}
+```
+$ node index.js
+```
 
 # About-the-author
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jaivardhan-bhola)
@@ -55,12 +53,7 @@ If you would like to contribute to this project reach out to me. Contact Informa
 Give a ⭐️ star if this project helped you!
 
 # License
-Copyright © ${data.licenseYear} [Jaivardhan Bhola](https://github.com/jaivardhan-bhola).<br />
-This project is [${data.license}](${data.licenseUrl}) licensed.
+Copyright © 2022 [Jaivardhan Bhola](https://github.com/jaivardhan-bhola).<br />
+This project is [MIT](https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE) licensed.
 ***
 <div align = "center"><img src="https://madewithlove.now.sh/in?heart=true&colorA=%23505050&colorB=%235032b4&template=for-the-badge&text=India" alt="Made with love in India"></div>
-
-`;
-}
-// function exportying generateMarkdown function
-module.exports = generateMarkdown;
