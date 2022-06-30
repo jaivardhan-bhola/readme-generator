@@ -24,6 +24,7 @@ function generateMarkdown(data) {
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [About the author](#about-the-author)
 - [Contribution](#contribution)
 - [Support Us](#show-your-support)
@@ -37,6 +38,9 @@ ${data.installation}
 
 # Usage
 ${data.usage}
+
+# Screenshots
+${data.screenshots}
 
 # About-the-author
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jaivardhan-bhola)

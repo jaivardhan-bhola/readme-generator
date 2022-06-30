@@ -34,12 +34,16 @@ function init() {
         name: "usage",
         message: "Enter Usage Info"
       },
-      { 
+      {
+        type:"editor",
+        name: "screenshots",
+        message: "Enter Screenshot links"
+      },
+          { 
           type: "checkbox",
           message: "Licensing Options",
           name: "license",
           choices: [
-              "None",
               "Apache2.0",
               "GNU Public v3.0",
               "MIT",
@@ -69,6 +73,14 @@ function init() {
           message: "Enter language badge URL"
         }        
     ]).then(function(data) {
+      // make img tags for screenshots from data.screenshots 
+      var screenshots = data.screenshots.split("\n");
+      var imgTags = "";
+      for (var i = 0; i < screenshots.length; i++) {
+        imgTags += `<img src="${screenshots[i]}" alt="screenshot" style="width:100%">`;
+      }
+      // add img tags to data.screenshots
+      data.screenshots = imgTags;
       console.log("Generated Markdown In Source Directory");
       writeToFile("README.md", generateMarkdown({...data}));  
 });
