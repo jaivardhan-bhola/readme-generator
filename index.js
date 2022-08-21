@@ -18,7 +18,7 @@ function init() {
       {
         type: "input",
         name: "description",
-        message: "Enter A Descrition For Your Project"
+        message: "Enter A Description For Your Project"
       },
       {
         type: "input",
