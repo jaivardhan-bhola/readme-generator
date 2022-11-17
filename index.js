@@ -72,11 +72,6 @@ function init() {
         },
         {
             type: "input",
-            name: "licenseUrl",
-            message: "Enter license URL"
-        },
-        {
-            type: "input",
             name: "licenseYear",
             message: "Enter licensing year"
         },
@@ -94,8 +89,12 @@ function init() {
         imgTags += `![screenshot](${screenshots[i]})`;
       }
       data.screenshots = imgTags;
+      var repo = data.repo;
+      data.licenseUrl = repo + "/blob/main/LICENSE";
       console.log("Generating README.md...");
-      writeToFile(file, generateMarkdown({...data}));  
+      writeToFile(file, generateMarkdown({...data})); 
+
+
 });
 }
 init()
