@@ -11,7 +11,7 @@
     <a href="https://github.com/jaivardhan-bhola/readme-generator" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
 </a>
-<a href="https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-['MIT']-brightgreen.svg"></a>  
+<a href="https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"></a>  
 <a href="https://twitter.com/BholaJaivardhan" target="_blank">
 <img alt="Twitter: BholaJaivardhan" src="https://img.shields.io/twitter/follow/BholaJaivardhan.svg?style=social" />
 </a>
@@ -56,7 +56,7 @@ Give a ⭐️ star if this project helped you!
 
 # License
 Copyright © 2022 [Jaivardhan Bhola](https://github.com/jaivardhan-bhola).<br />
-This project is [['MIT']](https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/jaivardhan-bhola/readme-generator/blob/main/LICENSE) licensed.
 ***
 <div align = "center"><img src="https://madewithlove.now.sh/in?heart=true&colorA=%23505050&colorB=%235032b4&template=for-the-badge&text=India" alt="Made with love in India"></div>
 
