@@ -111,7 +111,7 @@ This project is [{}]({}) licensed.
 ***
 <div align = "center"><img src="https://madewithlove.now.sh/in?heart=true&colorA=%23505050&colorB=%235032b4&template=for-the-badge&text=India" alt="Made with love in India"></div>
 
-    '''.format(answers['title'], answers['language_badge_url'], answers['language'], answers['repository_url'], answers['repository_url']+'/blob/main/LICENSE', answers['license'], answers['description'], answers['install_instructions'], answers['usage_instructions'], answers['screenshots'], answers['license_year'], answers['license'], answers['repository_url']+'/blob/main/LICENSE')
+    '''.format(answers['title'], answers['language_badge_url'], answers['language'], answers['repository_url'], answers['repository_url']+'/blob/main/LICENSE', answers['license'][0], answers['description'], answers['install_instructions'], answers['usage_instructions'], answers['screenshots'], answers['license_year'], answers['license'][0], answers['repository_url']+'/blob/main/LICENSE')
         f.write(a)
 def main():
     print("Welcome to the README.md generator")
