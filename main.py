@@ -47,7 +47,7 @@ def ask_questions():
         answers['directory_of_readme'] = os.getcwd()
     answers['screenshots'] = answers['screenshots'].splitlines()
     for i in range(len(answers['screenshots'])):
-        answers['screenshots'][i] = '<a><img src ="'+answers['screenshots'][i]+'" alt ="Screenshot"/></a>'
+        answers['screenshots'][i] = '<a><img src ="'+answers['screenshots'][i]+'?raw=true" alt ="Screenshot"/></a>'
     answers['screenshots'] = '\n'.join(answers['screenshots'])
 def create_readme():
     file_path = answers['directory_of_readme']+'/README.md'
